@@ -16,7 +16,7 @@ class BubbleSort(SortVisualizer):
                 self.bars[j].set_highlight(True)
                 self.bars[j+1].set_highlight(True)
 
-                QTimer.singleShot(700, self.loop.quit)  # Đợi để thấy highlight
+                QTimer.singleShot(700 / self.speed, self.loop.quit)  # Đợi để thấy highlight
                 self.loop.exec()
 
                 if self.array[j] > self.array[j + 1]:
@@ -28,3 +28,4 @@ class BubbleSort(SortVisualizer):
             self.bars[len(self.bars) - 1 - i].set_highlight(True, Bar.success_color)
 
         self.bars[0].set_highlight(True, Bar.success_color)
+        self.start_button.setEnabled(True)
