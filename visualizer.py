@@ -1,4 +1,4 @@
-from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve
+from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, QAbstractAnimation
 from PySide6.QtWidgets import QWidget, QGraphicsScene, QGraphicsView, QPushButton, QVBoxLayout
 from shape import Bar
 
@@ -11,7 +11,7 @@ class Visualizer(QWidget):
         self.view = QGraphicsView(self.scene)
         self.start_button = QPushButton("Start")
 
-        self.speed = 1.0
+        self.speed = 4.0
 
         layout = QVBoxLayout()
         layout.addWidget(self.view)
@@ -27,7 +27,6 @@ class SortVisualizer(Visualizer):
 
         self.bars = []
         self.create_bars()
-        self.speed = 1.0
         self.start_button.clicked.connect(self.start_sorting)
 
     def start_sorting(self):
@@ -64,12 +63,22 @@ class SortVisualizer(Visualizer):
         swap_group.addAnimation(bar1)
         swap_group.addAnimation(bar2)
 
+        self.bars[i], self.bars[j] = self.bars[j], self.bars[i]
+
         swap_group.finished.connect(self.loop.quit)
 
         swap_group.start()
         self.loop.exec()
 
-        self.bars[i], self.bars[j] = self.bars[j], self.bars[i]
+    def stop_sorting(self):
+        if hasattr(self, "loop") and self.loop.isRunning():
+            self.loop.exit()  # Thoát khỏi event loop nếu đang chạy
+
+            # Nếu có animation, dừng ngay lập tức
+        for bar in self.bars:
+            animations = bar.findChildren(QAbstractAnimation)
+            for animation in animations:
+                animation.stop()
 
 
 class GraphVisualizer(Visualizer):

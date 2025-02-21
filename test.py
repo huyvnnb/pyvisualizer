@@ -119,7 +119,7 @@ class BubbleSortVisualizer(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    array = [random.randint(1, 50) for _ in range(5)]  # Mảng giá trị ban đầu
+    array = [1, 2, 3, 4, 7, 6]  # Mảng giá trị ban đầu
     print(array)
     window = BubbleSortVisualizer(array)
     window.show()
