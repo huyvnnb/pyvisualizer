@@ -1,78 +1,147 @@
-from PySide6.QtWidgets import QApplication, QWidget, QGridLayout, QPushButton, QLabel, QVBoxLayout, QLineEdit, \
-    QHBoxLayout
-from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QPushButton, QLineEdit, QLabel, QStackedWidget
+from algorithm import BubbleSort, InsertionSort, MergeSort, QuickSort
+import random
 
-# Import các thuật toán (giả sử chúng đã được định nghĩa)
-from algorithm import BubbleSort, InsertionSort, MergeSort
+from visualizer import SortVisualizer
 
 
 class SortingApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Sorting Algorithm Selector")
-        self.setGeometry(100, 100, 600, 400)
+        self.setWindowTitle("Sorting Algorithm Visualizer")
+        self.setGeometry(100, 100, 800, 600)
 
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
 
-        # Thêm phần nhập array
-        self.input_layout = QHBoxLayout()
-        self.array_input = QLineEdit()
-        self.array_input.setPlaceholderText("Enter numbers separated by commas")
-        self.input_layout.addWidget(QLabel("Array: "))
-        self.input_layout.addWidget(self.array_input)
-        self.layout.addLayout(self.input_layout)
-
+        # Lưới chọn thuật toán
         self.grid_layout = QGridLayout()
         self.layout.addLayout(self.grid_layout)
 
-        self.algorithms = {
-            "Bubble Sort": "BubbleSort",
-            "Insertion Sort": "InsertionSort",
-            "Merge Sort": "MergeSort"
-        }
+        # Nhập mảng
+        self.input_layout = QHBoxLayout()
+        self.array_input = QLineEdit()
+        self.random_button = QPushButton("Randomize")
+        array_label = QLabel("Array: ")
+        self.array_input.setPlaceholderText("Enter numbers separated by commas")
 
+        self.random_button.clicked.connect(self.generate_random_array)
+
+        self.input_layout.addWidget(array_label)
+        self.input_layout.addWidget(self.array_input)
+        self.input_layout.addWidget(self.random_button)
+
+        self.layout.addLayout(self.input_layout)
+
+        # Khu vực chứa widget thuật toán (Căn giữa)
+        self.center_layout = QHBoxLayout()
+        self.layout.addLayout(self.center_layout)
+
+        # QStackedWidget để chuyển đổi giữa các thuật toán
+        self.stacked_widget = QStackedWidget()
+        self.center_layout.addWidget(self.stacked_widget, alignment= Qt.AlignCenter)
+
+        # Danh sách thuật toán
+        self.algorithms = ["Bubble Sort", "Insertion Sort", "Merge Sort", "Quick Sort", "Heap Sort"]
+        self.algorithm_widgets = {}
+        self.selected_button = None
         self.create_ui()
 
     def create_ui(self):
+        """Tạo UI với các thuật toán trong lưới"""
+        cols = 3  # Giới hạn số cột
         row, col = 0, 0
-        for name, algo_class in self.algorithms.items():
-            widget = self.create_algorithm_widget(name, algo_class)
-            self.grid_layout.addWidget(widget, row, col)
+        for name in self.algorithms:
+            self.add_algorithm(name, row, col)
             col += 1
-            if col > 1:  # Giới hạn 2 cột mỗi hàng
+            if col >= cols:  # Nếu quá số cột, xuống dòng
                 col = 0
                 row += 1
 
-    def create_algorithm_widget(self, name, algo_class):
-        widget = QWidget()
-        layout = QVBoxLayout()
-
-        # Ảnh minh họa (giả sử đã có ảnh trong thư mục images)
-        image_label = QLabel()
-        pixmap = QPixmap(f"images/sort.png")
-        image_label.setPixmap(pixmap.scaled(100, 100))
-
-        # Nút chọn thuật toán
+    def add_algorithm(self, name, row, col):
+        """Thêm thuật toán vào giao diện với vị trí hàng/cột"""
         button = QPushButton(name)
-        button.clicked.connect(lambda: self.run_algorithm(algo_class))
+        button.clicked.connect(lambda: self.show_algorithm_widget(name, button))
+        self.grid_layout.addWidget(button, row, col)
 
-        layout.addWidget(image_label)
-        layout.addWidget(button)
-        widget.setLayout(layout)
-        return widget
+        # Thêm placeholder cho thuật toán này
+        self.algorithm_widgets[name] = None
+        self.stacked_widget.addWidget(QWidget())  # Placeholder
 
-    def run_algorithm(self, algo_class):
+    def show_algorithm_widget(self, name, button):
+        """Hiển thị giao diện của thuật toán, căn giữa"""
+        self.stop_sorting()
+
+        if self.selected_button:
+            self.selected_button.setStyleSheet("")
+
+        # button.setStyleSheet("background-color: #FF5733; color: white; font-weight: bold;")  # Đổi màu
+        button.setStyleSheet("""
+            QPushButton {
+                background-color: #FF5733;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+            QPushButton:hover {
+                background-color: #E04D2B; /* Màu hover dịu hơn */
+            }
+            QPushButton:pressed {
+                background-color: #C44124; /* Màu khi nhấn */
+            }
+        """)
+        self.selected_button = button
+
+        array = self.get_array_from_input()
+        if array is None:
+            return
+
+        if self.algorithm_widgets[name] is not None:
+            old_widget = self.algorithm_widgets[name]
+            self.stacked_widget.removeWidget(old_widget)
+            old_widget.deleteLater()
+
+        widget = AlgorithmFactory.create_algorithm(name, array)
+        widget.setFixedSize(500, 400)
+        self.algorithm_widgets[name] = widget
+        self.stacked_widget.addWidget(widget)
+        self.stacked_widget.setCurrentWidget(widget)
+
+    def get_array_from_input(self):
+        """Lấy mảng từ input"""
         array_str = self.array_input.text()
         try:
-            array = [int(x.strip()) for x in array_str.split(",")]
-            algorithm_class = globals()[algo_class]  # Lấy class từ tên
-            algorithm = algorithm_class(array)
-            algorithm.start_sorting()  # Gọi phương thức chạy thuật toán
+            return [int(x.strip()) for x in array_str.split(",")]
         except ValueError:
             print("Invalid input! Please enter numbers separated by commas.")
-        except KeyError:
-            print(f"Algorithm {algo_class} not found!")
+            return None
+
+    def generate_random_array(self):
+        random_sample = random.sample(range(1, 50), 7)
+        self.array_input.setText(", ".join(map(str, random_sample)))
+
+    def stop_sorting(self):
+        current_widget = self.stacked_widget.currentWidget()
+        if isinstance(current_widget, SortVisualizer):
+            current_widget.stop_sorting()
+
+
+class AlgorithmFactory:
+    @staticmethod
+    def create_algorithm(name, array):
+        algorithms = {
+            "Bubble Sort": BubbleSort,
+            "Insertion Sort": InsertionSort,
+            "Merge Sort": MergeSort,
+            "Quick Sort": QuickSort
+        }
+
+        if name in algorithms:
+            return algorithms[name](array)
+        else:
+            raise ValueError(f"Algorithm '{name}' not found")
 
 
 if __name__ == "__main__":
