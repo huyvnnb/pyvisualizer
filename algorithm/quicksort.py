@@ -1,15 +1,15 @@
 from PySide6.QtCore import QTimer
-
 from visualizer import SortVisualizer
-import random
-
 
 class QuickSort(SortVisualizer):
     def __init__(self, array):
         super().__init__(array)
+        self.stack = [(0, len(self.array) - 1)]
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.sort_step)
 
     def start_sorting(self):
-        self.quicksort()
+        self.timer.start(100)  # Mỗi bước chạy sau 100ms
 
     def partition(self, low, high):
         pivot = self.array[high]
@@ -23,12 +23,13 @@ class QuickSort(SortVisualizer):
         self.swap_bars(i + 1, high)
         return i + 1
 
-    def quicksort(self):
-        stack = [(0, len(self.array) - 1)]
+    def sort_step(self):
+        if not self.stack:
+            self.timer.stop()
+            return
 
-        while stack:
-            low, high = stack.pop()
-            if low < high:
-                pivot = self.partition(low, high)
-                stack.append((low, pivot - 1))  # Đẩy phần bên trái vào stack
-                stack.append((pivot + 1, high))
+        low, high = self.stack.pop()
+        if low < high:
+            pivot = self.partition(low, high)
+            self.stack.append((low, pivot - 1))  
+            self.stack.append((pivot + 1, high))  
