@@ -29,3 +29,5 @@ class BubbleSort(SortVisualizer):
 
         self.bars[0].set_highlight(True, Bar.success_color)
         self.start_button.setEnabled(True)
+        print("Sort successfully")
+

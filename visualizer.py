@@ -1,5 +1,6 @@
-from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, QAbstractAnimation
-from PySide6.QtWidgets import QWidget, QGraphicsScene, QGraphicsView, QPushButton, QVBoxLayout
+from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, QAbstractAnimation, \
+    QTimer
+from PySide6.QtWidgets import QWidget, QGraphicsScene, QGraphicsView, QPushButton, QVBoxLayout, QApplication
 from shape import Bar
 
 
@@ -11,7 +12,7 @@ class Visualizer(QWidget):
         self.view = QGraphicsView(self.scene)
         self.start_button = QPushButton("Start")
 
-        self.speed = 4.0
+        self.speed = 3.0
 
         layout = QVBoxLayout()
         layout.addWidget(self.view)
@@ -24,8 +25,8 @@ class SortVisualizer(Visualizer):
         super().__init__()
         self.array = array
         self.loop = QEventLoop()
-
         self.bars = []
+        self.animations = []
         self.create_bars()
         self.start_button.clicked.connect(self.start_sorting)
 

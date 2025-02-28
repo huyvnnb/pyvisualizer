@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QApplication
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    array = [9,8,7,6,5]
+    array = [21, 42, 5, 42, 64, 12]
     print(array)
     window = QuickSort(array)
     window.show()
