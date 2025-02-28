@@ -81,7 +81,6 @@ class SortVisualizer(Visualizer):
             rect = Bar(start_x + i * (bar_width + spacing), 250 - height, bar_width, height)
             self.scene.addItem(rect)
             self.bars.append(rect)
-
     def swap_bars(self, i, j):
         # Hoán đổi trong mảng
         self.array[i], self.array[j] = self.array[j], self.array[i]
@@ -135,6 +134,7 @@ class QuickSort(SortVisualizer):
         self.start_button.setEnabled(False)
         self.gen = self.quicksort_generator(0, len(self.array) - 1)
         self.next_step()
+        print(self.array)
 
     def next_step(self):
         """
@@ -182,6 +182,7 @@ class QuickSort(SortVisualizer):
             if 0 <= low < len(self.bars):
                 yield ("highlight", low, Bar.success_color)  # Yield action highlight
             yield None  # Yield None để tiếp tục bước tiếp theo mà không có hành động
+        
 
     def partition_generator(self, low, high):
         """
