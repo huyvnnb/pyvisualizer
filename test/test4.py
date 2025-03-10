@@ -1,13 +1,14 @@
 ﻿import sys, random, math
 from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QTextEdit,
-    QGraphicsView, QGraphicsScene, QLineEdit, QLabel
+    QGraphicsView, QGraphicsScene, QLineEdit, QLabel, QGraphicsItem
 )
 from PySide6.QtGui import QBrush, QPen, QColor, QPainter, QPolygonF, QFont
 from PySide6.QtCore import Qt, QPointF
 
 # --- Lớp NodeCircle: Vẽ đỉnh dưới dạng hình tròn có nhãn ---
 from PySide6.QtWidgets import QGraphicsEllipseItem, QGraphicsTextItem
+
 
 class NodeCircle(QGraphicsEllipseItem):
     def __init__(self, x, y, radius, value="", color=QColor("skyblue"), *args, **kwargs):
@@ -24,6 +25,7 @@ class NodeCircle(QGraphicsEllipseItem):
         font = QFont("Arial", 10)
         self.label.setFont(font)
         self.label.setDefaultTextColor(Qt.black)
+        self.setFlags(QGraphicsItem.ItemIsMovable)
         # Đưa nhãn vào giữa node
         self.label.setPos(-self.label.boundingRect().width()/2,
                           -self.label.boundingRect().height()/2)
@@ -31,6 +33,7 @@ class NodeCircle(QGraphicsEllipseItem):
     def setRed(self):
         """Đổi màu của node thành đỏ."""
         self.setBrush(QBrush(QColor("red")))
+
 
 # --- Lớp Edge: Vẽ cạnh giữa 2 node; nếu đồ thị có hướng thì vẽ thêm mũi tên ---
 from PySide6.QtWidgets import QGraphicsLineItem
@@ -60,7 +63,7 @@ class Edge(QGraphicsLineItem):
             unit = QPointF(delta.x() / dist, delta.y() / dist)
             # Cắt bớt đoạn thẳng sao cho không vẽ vào trong node (bằng bán kính của node)
             new_start = posA + unit * self.nodeA.radius
-            new_end   = posB - unit * self.nodeB.radius
+            new_end = posB - unit * self.nodeB.radius
         self.setLine(new_start.x(), new_start.y(), new_end.x(), new_end.y())
 
     def paint(self, painter, option, widget):

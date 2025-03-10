@@ -81,6 +81,7 @@ class SortVisualizer(Visualizer):
             rect = Bar(start_x + i * (bar_width + spacing), 250 - height, bar_width, height)
             self.scene.addItem(rect)
             self.bars.append(rect)
+
     def swap_bars(self, i, j):
         # Hoán đổi trong mảng
         self.array[i], self.array[j] = self.array[j], self.array[i]
@@ -224,7 +225,7 @@ class QuickSort(SortVisualizer):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    array = [9, 8, 7, 6, 10]
+    array = [20, 15, 10, 25, 30, 5]
     print(array)
     window = QuickSort(array)
     window.show()

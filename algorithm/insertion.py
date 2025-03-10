@@ -10,18 +10,26 @@ class InsertionSort(SortVisualizer):
 
     def start_sorting(self):
         self.start_button.setEnabled(False)
+        self.gen = self.insertion_sort()
+        self.next_step()
 
-        self.bars[0].set_highlight(True, Bar.success_color)
+    def insertion_sort(self):
+        yield "highlight", 0, Bar.success_color
+        yield None
+        # self.bars[0].set_highlight(True, Bar.success_color)
         for i in range(1, len(self.bars)):
             key = self.array[i]
             j = i - 1
 
-            self.bars[i].set_highlight(True)
+            yield "compare", i
+            yield None
+            #self.bars[i].set_highlight(True)
             while j >= 0 and self.array[j] > key:
-
-                self.swap_bars(j, j+1)
+                yield "swap", j, j+1
+                yield None
+                #self.swap_bars(j, j + 1)
                 j = j - 1
 
-            self.bars[j+1].set_highlight(True, Bar.success_color)
-            QTimer.singleShot(700 / self.speed, self.loop.quit)  # Đợi để thấy highlight
-            self.loop.exec()
+            yield "highlight", j+1, Bar.success_color
+            yield None
+            #self.bars[j + 1].set_highlight(True, Bar.success_color)

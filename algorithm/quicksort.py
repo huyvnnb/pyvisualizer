@@ -1,6 +1,8 @@
 from PySide6.QtCore import QTimer
 from visualizer import SortVisualizer
 from shape import Bar
+
+
 class QuickSort(SortVisualizer):
     def __init__(self, array):
         super().__init__(array)
@@ -15,36 +17,6 @@ class QuickSort(SortVisualizer):
         self.start_button.setEnabled(False)
         self.gen = self.quicksort_generator(0, len(self.array) - 1)
         self.next_step()
-
-    def next_step(self):
-        """
-        Thực hiện 1 "bước" (step) của generator.
-        Sau đó, lên lịch cho bước kế tiếp qua QTimer.singleShot.
-        """
-        try:
-            action = next(self.gen)  # Nhận hành động tiếp theo từ generator
-            if action:  # Kiểm tra nếu có action trả về
-                action_type = action[0]
-                params = action[1:]
-
-                if action_type == "compare":
-                    j = params[0]
-                    self.bars[j].set_highlight(True, Bar.compare_color)
-                elif action_type == "swap":
-                    i, j = params
-                    self.swap_bars(i, j)
-                elif action_type == "highlight":
-                    index, color = params
-                    self.bars[index].set_highlight(True, color)
-                elif action_type == "reset_highlight":
-                    index = params[0]
-                    self.bars[index].set_highlight(False)
-
-            # Điều chỉnh delay theo ý muốn. 300 // self.speed chỉ là ví dụ.
-            QTimer.singleShot(int(300 // self.speed), self.next_step)
-        except StopIteration:
-            # Khi generator kết thúc, kích hoạt lại nút Start.
-            self.start_button.setEnabled(True)
 
     def quicksort_generator(self, low, high):
         """
@@ -70,13 +42,13 @@ class QuickSort(SortVisualizer):
         """
         pivot_value = self.array[high]
         # Highlight pivot bằng màu so sánh
-        yield ("highlight", high, Bar.compare_color)  # Yield action highlight
+        yield "highlight", high, Bar.compare_color  # Yield action highlight
         yield None  # Yield None để tiếp tục bước tiếp theo mà không có hành động
 
         i = low - 1
         for j in range(low, high):
             # Highlight bar[j] khi so sánh
-            yield ("compare", j)  # Yield action compare
+            yield "compare", j  # Yield action compare
             yield None  # Để giao diện kịp update
 
             if self.array[j] < pivot_value:
