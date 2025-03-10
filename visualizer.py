@@ -1,4 +1,5 @@
-from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, QAbstractAnimation
+from PySide6.QtCore import QEventLoop, QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, QAbstractAnimation, \
+    QTimer
 from PySide6.QtWidgets import QWidget, QGraphicsScene, QGraphicsView, QPushButton, QVBoxLayout
 from shape import Bar
 
@@ -11,7 +12,7 @@ class Visualizer(QWidget):
         self.view = QGraphicsView(self.scene)
         self.start_button = QPushButton("Start")
 
-        self.speed = 4.0
+        self.speed = 1.5
 
         layout = QVBoxLayout()
         layout.addWidget(self.view)
@@ -26,8 +27,10 @@ class SortVisualizer(Visualizer):
         self.loop = QEventLoop()
 
         self.bars = []
+        self.animations = []
         self.create_bars()
         self.start_button.clicked.connect(self.start_sorting)
+        self.gen = None
 
     def start_sorting(self):
         pass
@@ -50,8 +53,8 @@ class SortVisualizer(Visualizer):
         bar1 = QPropertyAnimation(self.bars[i], b"x_pos")
         bar2 = QPropertyAnimation(self.bars[j], b"x_pos")
 
-        bar1.setDuration(1000 / self.speed)
-        bar2.setDuration(1000 / self.speed)
+        bar1.setDuration(500 / self.speed)
+        bar2.setDuration(500 / self.speed)
 
         bar1.setEasingCurve(QEasingCurve.InOutQuad)
         bar2.setEasingCurve(QEasingCurve.InOutQuad)
@@ -65,20 +68,50 @@ class SortVisualizer(Visualizer):
 
         self.bars[i], self.bars[j] = self.bars[j], self.bars[i]
 
-        swap_group.finished.connect(self.loop.quit)
-
+        self.animations.append(swap_group)
+        swap_group.finished.connect(lambda: self.animations.remove(swap_group))
         swap_group.start()
-        self.loop.exec()
+
+        # swap_group.finished.connect(self.loop.quit)
+        #
+        # swap_group.start()
+        # self.loop.exec()
 
     def stop_sorting(self):
-        if hasattr(self, "loop") and self.loop.isRunning():
-            self.loop.exit()  # Thoát khỏi event loop nếu đang chạy
-
-            # Nếu có animation, dừng ngay lập tức
         for bar in self.bars:
             animations = bar.findChildren(QAbstractAnimation)
             for animation in animations:
                 animation.stop()
+
+    def next_step(self):
+        """
+        Thực hiện 1 "bước" (step) của generator.
+        Sau đó, lên lịch cho bước kế tiếp qua QTimer.singleShot.
+        """
+        try:
+            action = next(self.gen)  # Nhận hành động tiếp theo từ generator
+            if action:  # Kiểm tra nếu có action trả về
+                action_type = action[0]
+                params = action[1:]
+
+                if action_type == "compare":
+                    j = params[0]
+                    self.bars[j].set_highlight(True, Bar.compare_color)
+                elif action_type == "swap":
+                    i, j = params
+                    self.swap_bars(i, j)
+                elif action_type == "highlight":
+                    index, color = params
+                    self.bars[index].set_highlight(True, color)
+                elif action_type == "reset_highlight":
+                    index = params[0]
+                    self.bars[index].set_highlight(False)
+
+            # Điều chỉnh delay theo ý muốn. 300 // self.speed chỉ là ví dụ.
+            QTimer.singleShot(int(300 // self.speed), self.next_step)
+        except StopIteration:
+            # Khi generator kết thúc, kích hoạt lại nút Start.
+            self.start_button.setEnabled(True)
 
 
 class GraphVisualizer(Visualizer):
