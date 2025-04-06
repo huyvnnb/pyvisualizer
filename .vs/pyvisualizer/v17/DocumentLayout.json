@@ -1,34 +1,56 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\",
+  "WorkspaceRootPath": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test4.py||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test4.py||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\shape.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shape.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\application.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\application.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:application.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\window.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:window.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\visualizer.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\visualizer.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:visualizer.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test3.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test3.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\dijkstra.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:graphalgorithm\\dijkstra.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\insertion.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sortalgorithm\\insertion.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\quicksort.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sortalgorithm\\quicksort.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:graphalgorithm\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\merge.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sortalgorithm\\merge.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\bubble.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sortalgorithm\\bubble.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sortalgorithm\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\shape.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shape.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test3.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,32 +60,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "application.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\application.py",
+              "RelativeDocumentMoniker": "application.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\application.py",
+              "RelativeToolTip": "application.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-02-23T05:52:01.691Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "test4.py",
-              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test4.py",
-              "RelativeDocumentMoniker": "test4.py",
-              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test4.py",
-              "RelativeToolTip": "test4.py",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFEAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "insertion.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\insertion.py",
+              "RelativeDocumentMoniker": "sortalgorithm\\insertion.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\insertion.py",
+              "RelativeToolTip": "sortalgorithm\\insertion.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-02-28T03:44:10.533Z",
+              "WhenOpened": "2025-03-12T01:37:22.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "merge.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\merge.py",
+              "RelativeDocumentMoniker": "sortalgorithm\\merge.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\merge.py",
+              "RelativeToolTip": "sortalgorithm\\merge.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:37:20.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "bubble.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\bubble.py",
+              "RelativeDocumentMoniker": "sortalgorithm\\bubble.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\bubble.py",
+              "RelativeToolTip": "sortalgorithm\\bubble.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:37:18.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "__init__.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\__init__.py",
+              "RelativeDocumentMoniker": "graphalgorithm\\__init__.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\__init__.py",
+              "RelativeToolTip": "graphalgorithm\\__init__.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:36:13.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dijkstra.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\dijkstra.py",
+              "RelativeDocumentMoniker": "graphalgorithm\\dijkstra.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\graphalgorithm\\dijkstra.py",
+              "RelativeToolTip": "graphalgorithm\\dijkstra.py",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:36:12.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "quicksort.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\quicksort.py",
+              "RelativeDocumentMoniker": "sortalgorithm\\quicksort.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\quicksort.py",
+              "RelativeToolTip": "sortalgorithm\\quicksort.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:34:26.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "__init__.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\__init__.py",
+              "RelativeDocumentMoniker": "sortalgorithm\\__init__.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\sortalgorithm\\__init__.py",
+              "RelativeToolTip": "sortalgorithm\\__init__.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:34:21.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "window.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\window.py",
+              "RelativeDocumentMoniker": "window.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\window.py",
+              "RelativeToolTip": "window.py",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwFcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-12T01:29:16.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "shape.py",
-              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\shape.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\shape.py",
               "RelativeDocumentMoniker": "shape.py",
-              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\shape.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\shape.py",
               "RelativeToolTip": "shape.py",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
@@ -72,12 +203,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "test3.py",
               "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test3.py",
-              "RelativeDocumentMoniker": "test3.py",
+              "RelativeDocumentMoniker": "..\\..\\pyvisualizer\\test3.py",
               "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test3.py",
-              "RelativeToolTip": "test3.py",
+              "RelativeToolTip": "..\\..\\pyvisualizer\\test3.py",
               "ViewState": "AgIAAMQAAAAAAAAAAAAAAN4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-02-28T03:12:39.547Z",
@@ -85,54 +216,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "visualizer.py",
-              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\visualizer.py",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\visualizer.py",
               "RelativeDocumentMoniker": "visualizer.py",
-              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\visualizer.py",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\Code\\pyvisualizer\\visualizer.py",
               "RelativeToolTip": "visualizer.py",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANcAAAAAAAAAAAAgwOgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-02-26T12:25:20.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "test.py",
               "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test.py",
-              "RelativeDocumentMoniker": "test.py",
+              "RelativeDocumentMoniker": "..\\..\\pyvisualizer\\test.py",
               "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\test.py",
-              "RelativeToolTip": "test.py",
+              "RelativeToolTip": "..\\..\\pyvisualizer\\test.py",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-02-23T15:21:13.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "application.py",
-              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\application.py",
-              "RelativeDocumentMoniker": "application.py",
-              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\application.py",
-              "RelativeToolTip": "application.py",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwJcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-02-23T05:52:01.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.py",
-              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\main.py",
-              "RelativeDocumentMoniker": "main.py",
-              "ToolTip": "C:\\Users\\dell\\OneDrive\\M\u00E1y t\u00EDnh\\Python\\Mo phong tt nhom\\pyvisualizer\\main.py",
-              "RelativeToolTip": "main.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-02-23T05:51:59.913Z",
               "EditorCaption": ""
             }
           ]

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\graphalgorithm",
+    "\\sortalgorithm",
+    "\\test"
   ],
-  "SelectedNode": "\\test4.py",
+  "SelectedNode": "\\application.py",
   "PreviewInSolutionExplorer": false
 }
